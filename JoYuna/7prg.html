@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>팩토리얼 계산기</title>
+    <script>
+        function calculateFactorial() {
+            var num = document.getElementById("num").value;
+            var result = 1;
+
+            if (num === "" || isNaN(num)) {
+                alert("숫자를 입력하세요.");
+                return;
+            }
+
+            num = parseInt(num);
+
+            if (num < 0) {
+                alert("0 이상의 정수를 입력하세요.");
+                return;
+            }
+
+            for (var i = 1; i <= num; i++) {
+                result = result * i;
+            }
+
+            document.getElementById("result").innerText = "정수 " + num + "의 팩토리얼 값: " + result;
+        }
+
+        function resetForm() {
+            document.getElementById("num").value = "";
+            document.getElementById("result").innerText = "";
+        }
+    </script>
+</head>
+<body>
+    <h2>팩토리얼을 계산해봅시다!!</h2>
+    <p>정수를 입력하세요</p>
+    <input type="number" id="num">
+    <input type="button" value="계산" onclick="calculateFactorial()">
+    <p id="result"></p>
+</body>
+</html>

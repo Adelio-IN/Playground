@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>숫자 합 계산기</title>
+    <script>
+        let input = prompt("정수를 입력하세요", "정수 입력");
+        let num = parseInt(input);
+        let message;
+
+        if (isNaN(num) || num <= 0) {
+            message = "정수 정확히 입력해주세요.";
+        } else {
+            let total = (num * (num + 1)) / 2;
+            message = "숫자들의 합: " + total;
+        }
+
+        document.write(message);
+    </script>
+</head>
+<body>
+</body>
+</html>

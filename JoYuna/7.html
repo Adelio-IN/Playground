@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="document.getElementById('lightb').src='sunny.jpeg'">
+        전등켜기스위치</button>
+    <button onclick="document.getElementById('lightb').src='sunny-1.jpeg'">
+        전등끄기스위치</button>
+
+    <img id="lightb" src="sunny-1.jpeg" style="width: 120px;">
+
+    <p>마우스를 이미지 위로 올리면 이미지가 커집니다.</p>
+    <img onmouseover="this.style.width='200px'" onmouseout="this.style.width='100px'"
+    src="mag.jpeg" width="100px"><br />
+
+    <button type="button" onclick="alert('반갑습니다.')">버튼을 누르세요!</button>
+
+    <h1 id="test"></h1>
+    <script>
+        let x = 5;
+        let y = 6;
+        let z = x + y;
+        document.getElementById("test").innerHTML = z;
+        document.write((x > y) + "<br>");
+        document.write((x < y) + "<br>");
+        document.write((x == y) + "<br>");
+        document.write((x != y) + "<br>");
+    </script>
+
+    <script>
+        let age = parseInt(prompt("나이를 입력하세요", "만 나이로 입력합니다."));
+        document.write("당신의 나이는" + age +"입니다.");
+    </script>
+</body>
+</html>

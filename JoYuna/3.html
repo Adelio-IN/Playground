@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        h1 {text-decoration:overline;}
+        h2 {text-decoration:line-through;}
+        h3 {text-decoration:underline;}
+    </style>
+</head>
+<body>
+    <form name="input" action="login.jsp" method="get">
+        아이디: <input type="text" name="user"><br />
+        패스워드: <input type="password" name="pass"><br />
+        <input type="submit" value="로그인">
+        <button type="reset" onclick="alert('초기화되었습니다.')">초기화</button>
+    </form>
+    
+      
+
+    <h2>선호도 조사</h2>
+    <form>
+        성별:
+        <input type="radio" name="gender" value="male">남성
+        <input type="radio" name="gender" value="female">여성 <br>
+        학년 선택:
+        <input type="checkbox" name="grade" value="1 grade">1학년
+        <input type="checkbox" name="grade" value="2 grade">2학년
+        <input type="checkbox" name="grade" value="3 grade">3학년
+        <input type="checkbox" name="grade" value="4 grade">4학년
+    </form>
+    <p>선호하는 언어를 골라주세요</p>
+    <form action="process.jsp">
+        <input list="language" name="language">
+        <datalist id="language">
+            <option value="파이썬"></option>
+            <option value="자바"></option>
+            <option value="자바스크립트"></option>
+            <option value="JSP"></option>
+            <option value="GUI"></option>
+        </datalist>
+        <input type="submit">
+    </form>
+    <h1>텍스트 예시입니다.</h1>
+    <h2>텍스트 예시입니다.</h2>
+    <h3>텍스트 예시입니다.</h3>
+
+    
+</body>
+</html>
